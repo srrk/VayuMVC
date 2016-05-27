@@ -15,8 +15,18 @@
 	<%-- User user = (User) session.getAttribute("user"); --%>
 	
 	<!--  Receiving the object from Dispatcher. -->
-	<% User user = (User) request.getAttribute("user"); %>
-	<h1>Debug</h1>
-	<h1> Welcome Sri <%=user.getUserName() %></h1>
+	<%-- User user = (User) request.getAttribute("user"); --%>
+        
+        <!-- Receiving the Object through JSTL (Tag Library) -->
+        <jsp:useBean id="user" class="com.zeroraj.www.dto.User" scope="request">
+            <!-- Going to use useBean self-creating object if object not found in scope -->
+            <jsp:setProperty name="user" property="userName" value="Govinda"></jsp:setProperty>
+        </jsp:useBean>
+	
+	<!-- <h1> Welcome Sri <%--=user.getUserName() --%></h1> -->
+        
+        <!-- Printing the Object attribute using JSTL (Tag Library) -->
+        <jsp:getProperty name="user" property="userName"></jsp:getProperty>
+        
 </body>
 </html>
