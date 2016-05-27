@@ -15,6 +15,6 @@
 		<br>Password   : <input name=password type="password" />
 		<br><input type="submit" />
 	</form> 
-	
+	<!-- Just a comment -->
 </body>
 </html>
