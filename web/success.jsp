@@ -18,15 +18,16 @@
 	<%-- User user = (User) request.getAttribute("user"); --%>
         
         <!-- Receiving the Object through JSTL (Tag Library) -->
-        <jsp:useBean id="user" class="com.zeroraj.www.dto.User" scope="request">
-            <!-- Going to use useBean self-creating object if object not found in scope -->
-            <jsp:setProperty name="user" property="userName" value="Govinda"></jsp:setProperty>
+        <jsp:useBean id="user" class="com.zeroraj.www.dto.FormUser" scope="request">
+            <!-- Pushing all input parameters to pojo object members. -->
+            <jsp:setProperty name="user" property="*"></jsp:setProperty>
         </jsp:useBean>
 	
 	<!-- <h1> Welcome Sri <%--=user.getUserName() --%></h1> -->
         
         <!-- Printing the Object attribute using JSTL (Tag Library) -->
-        <jsp:getProperty name="user" property="userName"></jsp:getProperty>
+        Hello <jsp:getProperty name="user" property="username"></jsp:getProperty>
+        Your Pincode <jsp:getProperty name="user" property="pincode"></jsp:getProperty>
         
 </body>
 </html>

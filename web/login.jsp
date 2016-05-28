@@ -10,9 +10,11 @@
 
 	<!--  Login Page -->
 	<h1>Login with Username and Password (non-null)</h1>
-	<form action="login" method="post">
+	<form action="success.jsp" method="post">
 		<br>Login Name : <input name=username type="text" />
 		<br>Password   : <input name=password type="password" />
+                <br>Pincode    : <input name=pincode type="text" />
+                <br>Email      : <input name=email type="text" />
 		<br><input type="submit" />
 	</form> 
 	<!-- Just a comment -->
